@@ -40,10 +40,18 @@ private:
 
   // tool object used to compute Jacobian and RMSE
   Tools tools;
-  Eigen::MatrixXd R_laser_;
-  Eigen::MatrixXd R_radar_;
+
+  // measurement matrix for LIDAR
   Eigen::MatrixXd H_laser_;
+
+  // measurement covariance matrix for LIDAR
+  Eigen::MatrixXd R_laser_;
+
+  // measurement matrix for RADAR
   Eigen::MatrixXd Hj_;
+
+  // measurement covariance matrix for RADAR
+  Eigen::MatrixXd R_radar_;
 };
 
 #endif /* FusionEKF_H_ */
